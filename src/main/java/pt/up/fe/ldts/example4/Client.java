@@ -16,4 +16,9 @@ public class Client extends Worker {
         return Objects.equals(getName(), client.getName()) &&
                Objects.equals(getPhone(), client.getPhone());
     }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getName(), getPhone());
+    }
 }
